@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  background: rgb(240, 229, 229);
+  overflow: hidden;
+}
+
+/* დედამიწა  */
+.earth-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  animation-name: earth-spin;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes earth-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* ბილეთი  */
+.ticket-animation {
+  position: absolute;
+  top: 20%;
+  left: calc(50% + 180px);
+  transform: translateY(-50%) rotate(-5deg);
+  width: 120px;
+  height: auto;
+  animation-name: ticket-float;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-fill-mode: linear;
+}
+
+@keyframes ticket-float {
+  0%,
+  100% {
+    transform: translateY(-50%) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-60%) rotate(5deg);
+  }
+}
+
+.star-animation {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  top: 5%;
+  left: 5%;
+  animation-name: star-move;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-fill-mode: linear;
+}
+
+@keyframes star-move {
+  0% {
+    top: 5%;
+    left: 5%;
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    top: 5%;
+    left: auto;
+    right: 5%;
+    filter: hue-rotate(90deg);
+  }
+  50% {
+    top: auto;
+    bottom: 5%;
+    right: 5%;
+    filter: hue-rotate(180deg);
+  }
+  75% {
+    bottom: 5%;
+    left: 5%;
+    right: auto;
+    filter: hue-rotate(270deg);
+  }
+  100% {
+    top: 5%;
+    left: 5%;
+    filter: hue-rotate(360deg);
+  }
+}
