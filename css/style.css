@@ -14,11 +14,9 @@ body {
   transform: translate(-50%, -50%);
   animation-name: earth-spin;
   animation-duration: 10s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-direction: linear;
   animation-delay: 0s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes earth-spin {
@@ -44,7 +42,6 @@ body {
   animation-iteration-count: infinite;
   animation-direction: reverse;
   animation-delay: 0s;
-  animation-fill-mode: linear;
 }
 
 @keyframes ticket-float {
@@ -70,7 +67,6 @@ body {
   animation-iteration-count: infinite;
   animation-direction: normal;
   animation-delay: 0s;
-  animation-fill-mode: linear;
 }
 
 @keyframes star-move {
